@@ -29,11 +29,6 @@ const routes: Routes = [
   path:'register',
   component: RegistrationStudentComponent
 }
-
-
-
-
-
 ];
 
 @NgModule({
