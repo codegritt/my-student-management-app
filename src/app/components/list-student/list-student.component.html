@@ -7,6 +7,7 @@
         <th scope="col">first_name</th>
         <th scope="col">last_name</th>
         <th scope="col">email</th>
+        <th scope="col">Action</th>
       </tr>
     </thead>
     <tbody>
@@ -15,7 +16,7 @@
         <td>{{item.first_name}}</td>
         <td>{{item.last_name}}</td>
         <td>{{item.email}}</td>
-       
+       <td><span (click)="deleteStudent(item.id)">Delete</span></td>
       </tr>
       
     </tbody>
