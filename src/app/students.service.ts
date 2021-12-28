@@ -12,5 +12,8 @@ getAllStudent(){
   return this.http.get(this.url);
 }
 
+saveStudentData(data: any){
+console.log(data); 
+}
 
 }

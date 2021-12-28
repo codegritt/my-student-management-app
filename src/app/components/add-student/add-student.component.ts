@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormControl } from '@angular/forms';
+import { StudentsService } from 'src/app/students.service';
 
 @Component({
   selector: 'app-add-student',
@@ -8,7 +9,7 @@ import { FormGroup,FormControl } from '@angular/forms';
 })
 export class AddStudentComponent implements OnInit {
 
-  constructor() { }
+  constructor(private student:StudentsService) { }
 addStudent= new FormGroup({
   first_name: new FormControl(''),
   last_name:new FormControl(''),
@@ -19,6 +20,7 @@ addStudent= new FormGroup({
   ngOnInit(): void {
   }
 SaveData(){
-  console.log(this.addStudent.value);
+  //console.log(this.addStudent.value);
+  this.student.saveStudentData(this.addStudent.value);
 }
 }
