@@ -25,6 +25,7 @@ SaveData(){
   this.student.saveStudentData(this.addStudent.value).subscribe((result)=>{
     //console.log(result);
     this.message=true;
+    this.addStudent.reset({});
   });
 }
 removeMessage(){
