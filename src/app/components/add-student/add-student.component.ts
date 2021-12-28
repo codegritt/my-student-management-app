@@ -17,10 +17,12 @@ addStudent= new FormGroup({
 
 });
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
   }
-SaveData(){
+SaveData(){ 
   //console.log(this.addStudent.value);
-  this.student.saveStudentData(this.addStudent.value);
+  this.student.saveStudentData(this.addStudent.value).subscribe((result)=>{
+    console.log(result);
+  });
 }
 }

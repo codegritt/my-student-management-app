@@ -14,6 +14,7 @@ getAllStudent(){
 
 saveStudentData(data: any){
 console.log(data); 
+return this.http.post(this.url,data);
 }
 
 }
