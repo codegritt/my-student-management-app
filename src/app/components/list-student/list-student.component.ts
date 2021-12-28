@@ -18,5 +18,7 @@ export class ListStudentComponent implements OnInit {
       this.studentData=allData;
     });
   }
-
+deleteStudent(student_id:any){
+  console.log(student_id);
+}
 }
