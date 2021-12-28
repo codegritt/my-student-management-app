@@ -6,6 +6,7 @@ import {HttpClient} from '@angular/common/http'
 })
 export class StudentsService {
   url="http://localhost:3000/students";
+  
 
   constructor(private http:HttpClient) { }
 getAllStudent(){
@@ -17,4 +18,7 @@ console.log(data);
 return this.http.post(this.url,data);
 }
 
+deleteStudent(id :any){
+  return this.http.delete('${this.url}/${id}');
+}
 }
