@@ -10,9 +10,12 @@ export class ListStudentComponent implements OnInit {
 
   constructor(private student:StudentsService) { }
 
+
+  studentData={};
   ngOnInit(): void {
     this.student.getAllStudent().subscribe((allData)=>{
       console.log(allData);
+      this.studentData=allData;
     });
   }
 
