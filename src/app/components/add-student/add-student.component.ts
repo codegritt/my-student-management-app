@@ -27,4 +27,8 @@ SaveData(){
     this.message=true;
   });
 }
+removeMessage(){
+  this.message=false;
+}
+
 }
