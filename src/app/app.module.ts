@@ -10,6 +10,8 @@ import { LoginStudentComponent } from './components/login-student/login-student.
 import { RegistrationStudentComponent } from './components/registration-student/registration-student.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -25,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule 
+    HttpClientModule,
+    ReactiveFormsModule 
     
   ],
   providers: [],
