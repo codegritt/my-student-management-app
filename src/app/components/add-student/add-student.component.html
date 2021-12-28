@@ -1,21 +1,21 @@
 <h3>Add Student</h3>
 
-<form>
+<form [formGroup]="addStudent" (ngSubmit)="SaveData()">
     <div class="mb-3">
         <label class="form-label">first_name</label>
-        <input type="text" class="form-control" placeholder="Enter firstName">
+        <input type="text" class="form-control" placeholder="Enter firstName" formControlName="first_name">
        
       </div> 
 
       <div class="mb-3">
         <label class="form-label">last_name</label>
-        <input type="text" class="form-control" placeholder="Enter lastName">
+        <input type="text" class="form-control" placeholder="Enter lastName" formControlName="last_name">
        
       </div> 
 
     <div class="mb-3">
       <label class="form-label">email</label>
-      <input type="email" class="form-control" placeholder="Enter Email">
+      <input type="email" class="form-control" placeholder="Enter Email" formControlName="email">
      
     </div>
   
