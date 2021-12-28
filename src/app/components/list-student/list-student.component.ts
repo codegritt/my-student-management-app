@@ -21,7 +21,7 @@ export class ListStudentComponent implements OnInit {
 deleteStudent(student_id:any){
   
   this.student.deleteStudent(student_id).subscribe((result)=>{
-    //console.log(result);
+    // console.log(result);
     this.ngOnInit();
   });
 }
