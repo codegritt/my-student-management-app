@@ -11,7 +11,7 @@ export class ListStudentComponent implements OnInit {
   constructor(private student:StudentsService) { }
 
 
-  studentData={};
+  studentData: any=[];
   ngOnInit(): void {
     this.student.getAllStudent().subscribe((allData)=>{
       console.log(allData);
