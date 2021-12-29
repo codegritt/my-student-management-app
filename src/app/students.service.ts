@@ -27,7 +27,7 @@ deleteStudent(id :any){
 getStudentById(id: any){
   return this.http.get('${this.url}/${id}');
 }
-updateStudentData(id:number,data:any){
+updateStudentData(id:any,data:any){
   return this.http.put('${this.url}/${id}',data);
 }
 

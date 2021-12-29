@@ -39,6 +39,7 @@ export class EditStudentComponent implements OnInit {
    this.student.updateStudentData(this.router.snapshot.params['id'], this.editStudent.value)
    .subscribe((result)=>{
      console.log(result);
+     
    });
   }
 
