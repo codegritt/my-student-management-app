@@ -15,7 +15,7 @@ export class EditStudentComponent implements OnInit {
   editStudent= new FormGroup({
     first_name: new FormControl(''),
     last_name:new FormControl(''),
-    email: new FormControl('')
+    email: new FormControl(''),
   
   });
   
@@ -27,7 +27,7 @@ this.student.getStudentById(this.router.snapshot.params['id']).subscribe((result
   this.editStudent= new FormGroup({
     first_name: new FormControl(result['first_name']),
     last_name:new FormControl(result['last_name']),
-    email: new FormControl(result['email'])
+    email: new FormControl(result['email']),
   
   });
 });
