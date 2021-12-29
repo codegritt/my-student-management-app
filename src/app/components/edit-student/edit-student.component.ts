@@ -21,22 +21,14 @@ export class EditStudentComponent implements OnInit {
 
   message: boolean = false;
   ngOnInit(): void {
-    //console.log(this.router.snapshot.params['id']);
-    this.student.getStudentById(this.router.snapshot.params['id']).subscribe((result: any) => {
-      //console.log(result);
-      this.editStudent = new FormGroup({
-        first_name: new FormControl(result['first_name']),
-        last_name: new FormControl(result['last_name']),
-        email: new FormControl(result['email']),
-
-      });
-    });
+    console.log(this.router.snapshot.params['id']);
+    
+  
 
 
   }
   UpdateData() {
-    console.log(this.editStudent.value);
-
+   
   }
   removeMessage() {
     this.message = false;
