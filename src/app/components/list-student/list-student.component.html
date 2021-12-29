@@ -1,30 +1,26 @@
 <h3>Employee List</h3>
 
 <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">first_name</th>
-        <th scope="col">last_name</th>
-        <th scope="col">email</th>
-        <th scope="col">Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of studentData">
-        <th scope="row">{{item.id}}</th>
-        <td>{{item.first_name}}</td>
-        <td>{{item.last_name}}</td>
-        <td>{{item.email}}</td>
-       
-<td>
-  <button type="button" (click)="deleteStudent(item.id)" class="btn btn-danger">Delete</button>
-  &nbsp; 
-  <a routerLink="/edit/{{item.id}}" class="btn btn-warning">Edit</a>
-</td>
-
-
-      </tr>
-      
-    </tbody>
-  </table>  
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">first_name</th>
+      <th scope="col">last_name</th>
+      <th scope="col">email</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of studentData">
+      <th scope="row">{{item.id}}</th>
+      <td>{{item.first_name}}</td>
+      <td>{{item.last_name}}</td>
+      <td>{{item.email}}</td>
+      <td>
+        <button type="button" (click)="deleteStudent(item.id)" class="btn btn-danger">Delete</button>
+        &nbsp;
+        <a routerLink="/edit/{{item.id}}" class="btn btn-warning">Edit</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

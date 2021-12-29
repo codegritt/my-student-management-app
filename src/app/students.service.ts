@@ -21,4 +21,8 @@ return this.http.post(this.url,data);
 deleteStudent(id :any){
   return this.http.delete('${this.url}/${id}');
 }
+getStudentById(id: number){
+  return this.http.get('${this.url}/${id}');
+}
+
 }
