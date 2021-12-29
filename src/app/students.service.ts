@@ -6,6 +6,7 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class StudentsService {
+  [x: string]: any;
   url="http://localhost:3000/students";
   
 
