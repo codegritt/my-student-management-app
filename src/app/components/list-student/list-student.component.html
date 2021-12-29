@@ -16,8 +16,10 @@
         <td>{{item.first_name}}</td>
         <td>{{item.last_name}}</td>
         <td>{{item.email}}</td>
-       <td><button type="button" (click)="deleteStudent(item.id)">Delete</button></td>
-      
+       <td>
+        <i (click)="deleteStudent(item.id)" class="fa fa-trash"></i>
+      &nbsp;
+      <a routerLink="edit/{{item.id}}"><i class="fa fa-edit"></i></a></td>
       </tr>
       
     </tbody>
