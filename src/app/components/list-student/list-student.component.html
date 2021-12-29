@@ -17,9 +17,12 @@
       <td>{{item.last_name}}</td>
       <td>{{item.email}}</td>
       <td>
-        <button type="button" (click)="deleteStudent(item.id)" class="btn btn-danger">Delete</button>
-        &nbsp;
         <a routerLink="/edit/{{item.id}}" class="btn btn-warning">Edit</a>
+        &nbsp;
+        <button type="button" (click)="deleteStudent(item.id)" class="btn btn-danger">Delete</button>
+        
+       
+        
       </td>
     </tr>
   </tbody>

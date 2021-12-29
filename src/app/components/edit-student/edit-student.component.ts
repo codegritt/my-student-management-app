@@ -21,7 +21,7 @@ export class EditStudentComponent implements OnInit {
 
   message: boolean = false;
   ngOnInit(): void {
-    //console.log(this.router.snapshot.params['id']);
+    console.log(this.router.snapshot.params['id']);
     
   this.student.getStudentById(this.router.snapshot.params['id']).subscribe((result)=>{
     console.log(result);
