@@ -45,6 +45,7 @@ export class EditStudentComponent implements OnInit {
 
   removeMessage() {
     this.message = false;
+    
   }
 
 }
