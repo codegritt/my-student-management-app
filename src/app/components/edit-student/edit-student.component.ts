@@ -23,13 +23,26 @@ export class EditStudentComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.router.snapshot.params['id']);
     
-  this.student.getStudentById(this.router.snapshot.params['id']).subscribe((result)=>{
+  this.student.getStudentById(this.router.snapshot.params['id']).subscribe((result:any)=>{
     console.log(result);
+    this.editStudent = new FormGroup({
+      first_name: new FormControl(result['first_name']),
+      last_name: new FormControl(result['last_name']),
+      email: new FormControl(result['email']),
+  
+    });
+  
   });
 }
   UpdateData() {
-   
+   console.log(this.editStudent.value);
+   this.student.updateStudentData(this.router.snapshot.params['id'], this.editStudent.value)
+   .subscribe((result)=>{
+     console.log(result);
+   });
   }
+
+
   removeMessage() {
     this.message = false;
   }
