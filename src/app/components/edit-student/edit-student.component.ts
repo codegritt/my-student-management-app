@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,FormControl } from '@angular/forms';
 import { StudentsService } from 'src/app/students.service';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { StudentsService } from 'src/app/students.service';
 })
 export class EditStudentComponent implements OnInit {
 
-  constructor(private student:StudentsService) { }
+  constructor(private student:StudentsService,private router: ActivatedRoute) { }
   editStudent= new FormGroup({
     first_name: new FormControl(''),
     last_name:new FormControl(''),
@@ -20,6 +21,8 @@ export class EditStudentComponent implements OnInit {
   
   message: boolean=false;
     ngOnInit(): void { 
+console.log(this.router.snapshot.params['id']);
+
     }
   UpdateData(){ 
     
