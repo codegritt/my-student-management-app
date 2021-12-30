@@ -38,20 +38,15 @@ export class EditStudentComponent implements OnInit {
   });
 }
   UpdateData() {
-    this.employeeModelObj.id = this.editStudent.value.id;
-    this.employeeModelObj.firstName = this.editStudent.value.firstName;
-    this.employeeModelObj.lastName = this.editStudent.value.lastName;
-    this.employeeModelObj.email = this.editStudent.value.email;
+  
 
-   console.log(this.editStudent.value);
-   this.student.updateStudentData(this.editStudent.value, this.employeeModelObj.id)
-   .subscribe((result)=>{
-    let ref = document.getElementById('cancel')
-    ref?.click();
-     console.log(result);
-     
-   });
-  }
+    console.log(this.editStudent.value);
+    this.student.updateStudentData(this.router.snapshot.params['id'], this.editStudent.value)
+    .subscribe((result)=>{
+      console.log(result);
+      
+    });
+   }
 
 
   removeMessage() {
