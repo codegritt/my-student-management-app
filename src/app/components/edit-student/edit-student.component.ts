@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { StudentsService } from 'src/app/students.service';
 import { ActivatedRoute } from '@angular/router';
+import { EmployeeModel } from './edit-student.model';
 
 
 @Component({
@@ -10,6 +11,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./edit-student.component.css']
 })
 export class EditStudentComponent implements OnInit {
+
+  employeeModelObj: EmployeeModel = new EmployeeModel();
 
   constructor(private student: StudentsService, private router: ActivatedRoute) { }
   editStudent = new FormGroup({
@@ -35,9 +38,16 @@ export class EditStudentComponent implements OnInit {
   });
 }
   UpdateData() {
+    this.employeeModelObj.id = this.editStudent.value.id;
+    this.employeeModelObj.firstName = this.editStudent.value.firstName;
+    this.employeeModelObj.lastName = this.editStudent.value.lastName;
+    this.employeeModelObj.email = this.editStudent.value.email;
+
    console.log(this.editStudent.value);
-   this.student.updateStudentData(this.router.snapshot.params['id'], this.editStudent.value)
+   this.student.updateStudentData(this.editStudent.value, this.employeeModelObj.id)
    .subscribe((result)=>{
+    let ref = document.getElementById('cancel')
+    ref?.click();
      console.log(result);
      
    });
