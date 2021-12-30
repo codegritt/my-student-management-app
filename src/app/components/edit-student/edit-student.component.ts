@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { StudentsService } from 'src/app/students.service';
 import { ActivatedRoute } from '@angular/router';
-import { EmployeeModel } from './edit-student.model';
+
 
 
 @Component({
@@ -12,7 +12,7 @@ import { EmployeeModel } from './edit-student.model';
 })
 export class EditStudentComponent implements OnInit {
 
-  employeeModelObj: EmployeeModel = new EmployeeModel();
+
 
   constructor(private student: StudentsService, private router: ActivatedRoute) { }
   editStudent = new FormGroup({
